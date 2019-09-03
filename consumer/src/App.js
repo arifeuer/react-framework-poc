@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import RedBizModule from './RedBizModule/RedBizModule';
+import ExampleComponent from 'framework';
+
+const consumerComponents = [
+  {
+    component: RedBizModule,
+    name: "Red Biz Module"
+  },
+  {
+    component: RedBizModule,
+    name: "Red Biz Module"
+  }
+];
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  return consumerComponents.map(consumerComponent =>
+      <div>
+        <ExampleComponent name={consumerComponent.name} component={<consumerComponent.component />} />
+      </div>
   );
 }
 
