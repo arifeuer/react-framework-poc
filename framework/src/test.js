@@ -1,7 +1,7 @@
-import ExampleComponent from './'
+import FrameworkComponet from './'
 
-describe('ExampleComponent', () => {
+describe('FrameworkComponet', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(FrameworkComponet).toBeTruthy()
   })
 })

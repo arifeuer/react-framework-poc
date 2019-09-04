@@ -1,25 +1,23 @@
 import React from 'react';
 import './App.css';
 import RedBizModule from './RedBizModule/RedBizModule';
-import ExampleComponent from 'framework';
+import FrameworkComponent from 'framework';
 
 const consumerComponents = [
   {
     component: RedBizModule,
-    name: "Red Biz Module"
-  },
-  {
-    component: RedBizModule,
-    name: "Red Biz Module"
+    name: "Red Biz Module",
+    path: '/red'
   }
 ];
 
 function App() {
-  return consumerComponents.map(consumerComponent =>
-      <div>
-        <ExampleComponent name={consumerComponent.name} component={<consumerComponent.component />} />
-      </div>
-  );
+
+  return (
+    <div>
+      <FrameworkComponent components={consumerComponents}/>
+    </div>
+  )
 }
 
 export default App;

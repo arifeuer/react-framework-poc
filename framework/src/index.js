@@ -2,24 +2,31 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import styles from './styles.css'
+import PurpleFwComponent from './components/PurpleFwComponent/PurpleFwComponent';
+import FrameworkContainer from './components/FrameworkContainer/FrameworkContainer';
+import FrameworkRouter from './router/FrameworkRouter';
 
-export default class ExampleComponent extends Component {
+const frameworkComponents = [
+  {
+    name: 'Purple FW Component',
+    component: PurpleFwComponent,
+    path: '/purple'
+  }
+];
+
+export default class FrameworkComponent extends Component {
   // static propTypes = {
   //   text: PropTypes.string
   // }
 
+
+
   render() {
-    // const {
-    //   text
-    // } = this.props
+    const combinedComponents = this.props.components.concat(frameworkComponents);
 
     return (
-      <div>
-        <div>
-          {this.props.name}
-          {this.props.component}
-        </div>
-      </div>
-    )
+      <FrameworkRouter components={combinedComponents} />
+    );
+
   }
 }

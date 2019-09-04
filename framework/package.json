@@ -26,6 +26,10 @@
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0"
   },
+  "dependencies": {
+    "history": "^4.9.0",
+    "react-router": "^4.0.0"
+  },
   "devDependencies": {
     "@svgr/rollup": "^2.4.1",
     "babel-core": "^6.26.3",
