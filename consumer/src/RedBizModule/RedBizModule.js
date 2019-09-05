@@ -3,7 +3,7 @@ import './redBizModule.css'
 
 class RedBizModule extends React.Component {
     render () {
-       return <p className="red">RedBizModule</p>;
+       return <h1 className="red">Red Business Module</h1>;
     }
 }
 

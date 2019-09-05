@@ -13,7 +13,9 @@ class FrameworkContainer extends Component {
         return (
             <div>
                 <TopNav components={this.props.components} />
-                {routes}
+                <div style={{margin:'10px'}}>
+                    {routes}
+                </div>
             </div>
         );
     }
