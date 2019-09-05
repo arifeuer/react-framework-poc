@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 class TopNav extends Component {
 
     render() {
         const tabs = this.props.components.map(component =>
-            <div style={{display:'inline-block', margin: '10px'}}>
-                {component.name}
-            </div>
+            <NavLink to={component.path}>{component.name}</NavLink>
         );
 
         return (

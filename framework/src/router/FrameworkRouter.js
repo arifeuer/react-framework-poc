@@ -1,24 +1,17 @@
 import React, { Component } from 'react';
-import { Router, Route } from 'react-router';
-import { createBrowserHistory } from 'history';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import FrameworkContainer from '../components/FrameworkContainer/FrameworkContainer';
 
 class FrameworkRouter extends Component {
 
     render() {
-        const routes = this.props.components.map(component =>
-            <Route path={component.path} component={component.component} />
-        );
-
-        const customHistory = createBrowserHistory();
-
         return (
             <div>
-                <Router history={customHistory}>
-                    <Route path="/" render={(props) => {
-                        return <FrameworkContainer {...props} components={this.props.components} />}} >
-                        {routes}
+                <Router>
+                    <Route path='/' render={routeProps =>
+                        <FrameworkContainer {...routeProps} components={this.props.components} />}
+                    >
                     </Route>
                 </Router>
             </div>

@@ -28,7 +28,8 @@
   },
   "dependencies": {
     "history": "^4.9.0",
-    "react-router": "^4.0.0"
+    "react-router": "^4.0.0",
+    "react-router-dom": "^5.0.1"
   },
   "devDependencies": {
     "@svgr/rollup": "^2.4.1",
